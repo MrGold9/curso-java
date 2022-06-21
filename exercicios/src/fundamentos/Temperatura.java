@@ -4,7 +4,7 @@ public class Temperatura {
 	
 	public static void main(String[] args) 
 	{
-		// (Â°F - 32) * 5/9 = Â°C
+		// (°F - 32) * 5/9 = °C
 		
 		final int subtracao = 32;
 		final double multiplicador = 5/9.0;
@@ -12,7 +12,7 @@ public class Temperatura {
 		double F = 75;
 		double C = (F - subtracao) * multiplicador;
 		
-		System.out.println(F + "Â° Fahrenheit Ã© igual a " + C + "Â° Celsius");	
+		System.out.println(F + "° Fahrenheit é igual a " + C + "° Celsius");	
 	}
 
 }
