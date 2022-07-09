@@ -14,32 +14,45 @@ public class DesafioCalculadora
 		
 		Scanner entrada = new Scanner(System.in);
 		
-		String escolha;
-		String operacao1, operacao2, operacao3, operacao4,
-				operacao5;
-		double num1, num2, resultado;
+		int escolha=0;
+		double operacao1=0.0, operacao2=0.0, operacao3=0.0, operacao4=0.0,
+				operacao5=0.0;
+		double num1=0.0, num2=0.0;
+		double resultadoFinal=0.0;
 		
-		System.out.print("Qual operação deseja fazer? + - * / % ");
-		escolha = entrada.nextLine().trim();
 		
-		operacao5 = escolha == "%" ?
-				"Digite um número: " : "Digite uma operação válida.";
-		
-		operacao4 = escolha == "/" ?
-				"Digite um número: " : operacao5;
-		
-		operacao3 = escolha == "*" ?
-				"Digite um número: " : operacao4;
-		
-		operacao2 = escolha == "-" ?
-				"Digite um número: " : operacao3;
-		
-		operacao1 = escolha == "+" ?
-				"Digite um número: " : operacao2;
-		
-		System.out.println(operacao1);
+		System.out.print("Digite o primeiro número: ");
 		num1 = entrada.nextDouble();
+		System.out.print("Digite o segundo número: ");
+		num2 = entrada.nextDouble();
 		
+		System.out.println("Qual operação deseja fazer? Digite: "
+		+ "1 para +, 2 para -, 3 para *, 4 para / e  5 para %");
+		escolha = entrada.nextInt();
+		
+		
+		operacao1 = escolha == 1 ?
+				num1 + num2 : operacao2;
+		
+		operacao2 = escolha == 2 ?
+				num1 - num2 : operacao3;
+		
+		operacao3 = escolha == 3 ?
+				num1 * num2 : operacao4;
+		
+		operacao4 = escolha == 4 ?
+				num1 / num2 : operacao5;
+		
+		operacao5 = escolha == 5 ?
+				num1 % num2 : 0;
+		
+		resultadoFinal = operacao1 + operacao2 + 
+				operacao3 + operacao4 + operacao5;
+		
+		
+		System.out.println("O resultado da operação é: " + resultadoFinal);
+		
+		entrada.close();
 	}
 
 }
