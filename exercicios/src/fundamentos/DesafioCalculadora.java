@@ -16,8 +16,8 @@ public class DesafioCalculadora
 		
 		//Criação e inicialização das variáveis
 		String escolha="";
-		String seleciona1="", seleciona2="", seleciona3="", seleciona4="",
-				seleciona5="";
+		String resultado="";
+		String resultadoFinal="";
 		Double operacaoSoma=0.0, operacaoSubt=0.0, operacaoMulti=0.0,
 				operacaoDiv=0.0, operacaoMod=0.0;
 		double num1=0.0, num2=0.0;
@@ -30,7 +30,8 @@ public class DesafioCalculadora
 		num2 = entrada.nextDouble();
 		
 		System.out.println("Qual operação deseja fazer? Digite: "
-		+ "1 para +, 2 para -, 3 para *, 4 para / e  5 para %");
+		+ "+ para adição, - para subtração, * para multiplicação, "
+		+ "/ para divisão e % para resto de divisão");
 		escolha = entrada.next().trim();
 		
 		//Cálculo de cada operação
@@ -44,25 +45,27 @@ public class DesafioCalculadora
 		ao número correspondente da operação, se for verdadeiro vai
 		realizar a respectiva operação, caso falso vai pular para outro
 		booleano até encontrar a opção que se encaixa*/
-		seleciona1 = escolha.equals("1") ?
-				operacaoSoma.toString() : seleciona2;
+		resultado = escolha.equals("+") ?
+				operacaoSoma.toString() : "0";
 		
-		seleciona2 = escolha.equals("2") ?
-				operacaoSubt.toString() : seleciona3;
+		resultado = escolha.equals("-") ?
+				operacaoSubt.toString() : resultado;
 		
-		seleciona3 = escolha.equals("3") ?
-				operacaoMulti.toString() : seleciona4;
+		resultado = escolha.equals("*") ?
+				operacaoMulti.toString() : resultado;
 		
-		seleciona4 = escolha.equals("4") ?
-				operacaoDiv.toString() : seleciona5;
+		resultado = escolha.equals("/") ?
+				operacaoDiv.toString() : resultado;
 		
-		seleciona5 = escolha.equals("5") ?
-				operacaoMod.toString() : "";
+		resultado = escolha.equals("%") ?
+				operacaoMod.toString() : resultado;
+		
 
+		//Armazenando os dados dentro de uma String
+		resultadoFinal = num1 + " " + escolha + " " + num2 + " = " + resultado;
 		
 		//Output final
-		System.out.println("O resultado final da operação é: " + seleciona1 + seleciona2 + seleciona3 + 
-				seleciona4 + seleciona5);
+		System.out.println(resultadoFinal);
 		
 		entrada.close();
 	}
