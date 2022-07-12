@@ -14,13 +14,16 @@ public class DesafioCalculadora
 		
 		Scanner entrada = new Scanner(System.in);
 		
-		int escolha=0;
-		double operacao1=0.0, operacao2=0.0, operacao3=0.0, operacao4=0.0,
-				operacao5=0.0;
+		//Criação e inicialização das variáveis
+		String escolha="";
+		String seleciona1="", seleciona2="", seleciona3="", seleciona4="",
+				seleciona5="";
+		Double operacaoSoma=0.0, operacaoSubt=0.0, operacaoMulti=0.0,
+				operacaoDiv=0.0, operacaoMod=0.0;
 		double num1=0.0, num2=0.0;
-		double resultadoFinal=0.0;
 		
 		
+		//Input das variáveis principais
 		System.out.print("Digite o primeiro número: ");
 		num1 = entrada.nextDouble();
 		System.out.print("Digite o segundo número: ");
@@ -28,29 +31,38 @@ public class DesafioCalculadora
 		
 		System.out.println("Qual operação deseja fazer? Digite: "
 		+ "1 para +, 2 para -, 3 para *, 4 para / e  5 para %");
-		escolha = entrada.nextInt();
+		escolha = entrada.next().trim();
 		
+		//Cálculo de cada operação
+		operacaoSoma = num1 + num2;
+		operacaoSubt = num1 - num2;
+		operacaoMulti = num1 * num2;
+		operacaoDiv = num1 / num2;
+		operacaoMod = num1 % num2;
 		
-		operacao1 = escolha == 1 ?
-				num1 + num2 : operacao2;
+		/*Pergunta se a escolha (número inserido pelo usuário) é igual
+		ao número correspondente da operação, se for verdadeiro vai
+		realizar a respectiva operação, caso falso vai pular para outro
+		booleano até encontrar a opção que se encaixa*/
+		seleciona1 = escolha.equals("1") ?
+				operacaoSoma.toString() : seleciona2;
 		
-		operacao2 = escolha == 2 ?
-				num1 - num2 : operacao3;
+		seleciona2 = escolha.equals("2") ?
+				operacaoSubt.toString() : seleciona3;
 		
-		operacao3 = escolha == 3 ?
-				num1 * num2 : operacao4;
+		seleciona3 = escolha.equals("3") ?
+				operacaoMulti.toString() : seleciona4;
 		
-		operacao4 = escolha == 4 ?
-				num1 / num2 : operacao5;
+		seleciona4 = escolha.equals("4") ?
+				operacaoDiv.toString() : seleciona5;
 		
-		operacao5 = escolha == 5 ?
-				num1 % num2 : 0;
+		seleciona5 = escolha.equals("5") ?
+				operacaoMod.toString() : "";
+
 		
-		resultadoFinal = operacao1 + operacao2 + 
-				operacao3 + operacao4 + operacao5;
-		
-		
-		System.out.println("O resultado da operação é: " + resultadoFinal);
+		//Output final
+		System.out.println("O resultado final da operação é: " + seleciona1 + seleciona2 + seleciona3 + 
+				seleciona4 + seleciona5);
 		
 		entrada.close();
 	}
