@@ -13,6 +13,8 @@ public class If
 		System.out.println("Informe a média: ");
 		double media = entrada.nextDouble();
 		
+		//No if se a operação entre parênteses for verdadeira, significa
+		//que este será o bloco de código a ser executado
 		if (media >= 7.0 && media <= 10.0) 
 		{
 			System.out.println("Parabéns! Você foi aprovado.");
