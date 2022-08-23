@@ -13,18 +13,28 @@ public class ExerciciosMatriz
 		
 		
 		Random aleatorio = new Random();
-		int linhas = aleatorio.nextInt(11);
-		int colunas = aleatorio.nextInt(11);
+		int colunas = aleatorio.nextInt(10);
+		int linhas = aleatorio.nextInt(10);
+		
+		int posicaoColuna = 0;
+		String juncaoLinha = "";
+		
 
 		for (int i = 0; i <= linhas; i++) 
 		{
+			
 			for (int j = 0; j <= colunas; j++) 
 			{
-				
+				posicaoColuna = aleatorio.nextInt(10);
+				juncaoLinha += " " + posicaoColuna;
 			}
+			
+			juncaoLinha += "\n";
 		}
 		
-		entrada.close();	
+		System.out.println(juncaoLinha);
+		
+		entrada.close();
 	}
 	
 }
