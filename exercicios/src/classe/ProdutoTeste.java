@@ -6,7 +6,9 @@ public class ProdutoTeste
 	public static void main(String[] args) 
 	{
 		
+		//Instanciando o objeto p1
 		Produto p1 = new Produto();
+		//Definição dos atributos
 		p1.nome = "Refrigerante";
 		p1.preco = 9.99;
 		p1.desconto = 0.10;
@@ -20,11 +22,16 @@ public class ProdutoTeste
 		System.out.println(p1.nome);
 		System.out.println(p2.nome);
 		
-		double precoFinal1 = p1.preco * (1 - p1.desconto);
-		double precoFinal2 = p2.preco * (1 - p2.desconto);
-		double mediaPreco = (precoFinal1 + precoFinal2) / 2;
-		System.out.printf("A média dos preços dos produtos %s e %s é %.2f", p1.nome, p2.nome, mediaPreco);
+		//Invocando o método precoComDesconto em um objeto
+		//específico e definindo o valor do seu parâmetro 
+		//dentro dos parênteses
+		double precoFinal1 = p1.precoComDesconto(0);
+		double precoFinal2 = p2.precoComDesconto(0.10);
 		
+		double mediaPreco = (precoFinal1 + precoFinal2) / 2;
+		System.out.printf("A média dos preços dos produtos %s e %s é de %.2f reais", p1.nome, p2.nome, mediaPreco);
+		
+				
 	}
 
 }
