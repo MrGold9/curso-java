@@ -18,13 +18,20 @@ public class DataTeste
 		d2.ano = "2077";
 		
 		
-		//Aglutinando os atributos de cada objeto em Strings distintas
-		String data1 = d1.dia +  "/" + d1.mes + "/" + d1.ano;
-		String data2 = d2.dia +  "/" + d2.mes + "/" + d2.ano;
+		//Invocando o método dataFormatada para aglutinar
+		//os atributos e formar a data completa de cada objeto
+		String data1 = d1.dataFormatada();
+		String data2 = d2.dataFormatada();
 		
 		//Output
 		System.out.println(data1);
 		System.out.println(data2);
+		
+		System.out.println();
+		
+		//Invocando o método void imprimirDataFormatada
+		d1.imprimirDataFormatada();
+		d2.imprimirDataFormatada();
 		
 	}
 
