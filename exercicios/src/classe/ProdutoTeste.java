@@ -7,13 +7,19 @@ public class ProdutoTeste
 	{
 		
 		//Instanciando o objeto p1
-		Produto p1 = new Produto();
-		//Definição dos atributos
-		p1.nome = "Refrigerante";
-		p1.preco = 9.99;
-		p1.desconto = 0.10;
+		/*Os atributos podem ser definidos dentro
+		dos parênteses usando um construtor*/
+		Produto p1 = new Produto("Refrigerante", 9.99, 0.10);
 		
+		//p1.nome = "Refrigerante";
+		//p1.preco = 9.99;
+		//p1.desconto = 0.10;
+		
+		
+		//Instanciando o objeto p2
 		var p2 = new Produto();
+		
+		/*Definição dos atributos acessando o objeto*/
 		p2.nome = "Colar";
 		p2.preco = 119.99;
 		p2.desconto = 0.25;
