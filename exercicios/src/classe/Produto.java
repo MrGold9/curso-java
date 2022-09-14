@@ -16,11 +16,12 @@ public class Produto
 	 * construtor criando e definindo os parâmetros necessários*/
 	Produto()
 	{
-		
+		//Construtor padrão
 	}
 	
 	Produto(String nomeInicial, double precoInicial, double descontoInicial)
 	{
+		//Construtor criado
 		nome = nomeInicial;
 		preco = precoInicial;
 		desconto = descontoInicial;
