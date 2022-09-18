@@ -19,7 +19,10 @@ public class AreaCircTeste
 		/*Instanciando o objeto "a2"*/
 		AreaCirc a2 = new AreaCirc(10);
 		
-		/*Mudando o valor do atributo pi dentro do objeto "a2"*/
+		/*Mudando o valor do atributo pi através do objeto
+		 * Obs: o valor de pi não está sendo alterado apenas
+		 * dentro do objeto "a2", mas sim, o próprio atributo
+		 * que está na classe*/
 		//a2.pi = 5;
 				
 		System.out.println(a2.area());
