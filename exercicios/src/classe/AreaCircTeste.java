@@ -36,6 +36,18 @@ public class AreaCircTeste
 		//AreaCirc.pi = 7;
 						
 		System.out.println(a3.area());
+		
+		
+		
+		//Utilizando o método area static sem instanciar um objeto
+		System.out.println(AreaCirc.area(100));
+		
+		//Chamando o atributo pi da classe AreaCirc
+		System.out.println(AreaCirc.pi);
+		
+		//Chamando o atributo pi da classe Math
+		System.out.println(Math.PI);
+		
 	}
 
 }

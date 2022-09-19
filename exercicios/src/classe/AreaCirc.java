@@ -32,5 +32,14 @@ public class AreaCirc
 	{
 		return pi * Math.pow(raio, 2);
 	}
+	
+	//Método area como static
+	/*Não é preciso instanciar um objeto para usar
+	 * este método, é possível chamá-lo usando apenas
+	 * a sua classe, exemplo: AreaCirc.area(50)*/
+		static double area(double raio) 
+		{
+			return pi * Math.pow(raio, 2);
+		}
 
 }
