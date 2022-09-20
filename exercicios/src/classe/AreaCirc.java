@@ -4,11 +4,13 @@ public class AreaCirc
 {
 	
 	double raio;
-	/*O static por sí só permite que o valor de um atributo
-	 ou um método seja chamado no Main sem instanciar
-	 um objeto, exemplo, ao chamar o valor de pi usando 
-	 Math.PI não é necessário intanciar um objeto com o 
-	 New Math()*/
+	/*
+	 	O static por sí só permite que o valor de um atributo
+	 seja alterado no Main e que um valor seja retornado sem
+	 a instância de um objeto, exemplo, ao chamar o valor de
+	 pi usando Math.PI não é necessário intanciar um objeto
+	 com seu nome mais New Math()
+	 */
 	/*O static final não permite que o valor do
 	atributo seja alterado*/
 	static final double pi = 3.14;
