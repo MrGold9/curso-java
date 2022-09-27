@@ -20,6 +20,9 @@ public class ValorVsReferencia
 		Data d1 = new Data("01", "06", "2022");
 		Data d2 = d1;
 		
+		//Como tanto o objeto d1 quanto o d2 estão com a mesma
+		//referência, ao alterar o valor do atributo de um, também 
+		//será alterado o valor do outro objeto
 		d1.dia = "31";
 		d2.mes = "12";
 		d1.ano = "2025";
@@ -32,12 +35,14 @@ public class ValorVsReferencia
 		System.out.println(d1.dataFormatada());
 		System.out.println(d2.dataFormatada());
 		
+		//***
 		int c = 5;
 		alterarPrimitivo(c);
 		System.out.println(c);
 		
 	}
 	
+	//seta os atributos do objeto Data para um valor padrão
 	static void voltarDataParaValorPadrao(Data d) 
 	{
 		d.dia = "01";
@@ -45,6 +50,7 @@ public class ValorVsReferencia
 		d.ano = "1970";
 	}
 	
+	//***
 	static void alterarPrimitivo(int a) 
 	{
 		a++;
