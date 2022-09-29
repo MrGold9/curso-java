@@ -35,7 +35,7 @@ public class ValorVsReferencia
 		System.out.println(d1.dataFormatada());
 		System.out.println(d2.dataFormatada());
 		
-		//***
+		//O output será 5
 		int c = 5;
 		alterarPrimitivo(c);
 		System.out.println(c);
@@ -43,6 +43,8 @@ public class ValorVsReferencia
 	}
 	
 	//seta os atributos do objeto Data para um valor padrão
+	/*O valor dos atributos de um objeto serão alterados porque
+	 são baseados em atribuição por referência*/
 	static void voltarDataParaValorPadrao(Data d) 
 	{
 		d.dia = "01";
@@ -50,10 +52,11 @@ public class ValorVsReferencia
 		d.ano = "1970";
 	}
 	
-	//***
-	static void alterarPrimitivo(int a) 
+	/* O valor do tipo primitivo não será alterado pois
+	é feita uma cópia da variável "c" através do parâmetro*/
+	static void alterarPrimitivo(int c) 
 	{
-		a++;
+		c++;
 	}
 
 }
