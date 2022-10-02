@@ -14,8 +14,9 @@ public class PrimeiroTrauma
 		PrimeiroTrauma p = new PrimeiroTrauma();
 		System.out.println(p.a);
 		
+		//System.out.println(a);
 		
-		/*A variável pode ser chamada por qualquer 
+		/*A variável "b" pode ser chamada por qualquer 
 		 método pois está como static*/
 		System.out.println(b);
 		
