@@ -23,7 +23,7 @@ public class Data
 		/*As variáveis locais necessitam de uma
 		 inicialização, caso contrário, ocorrerá
 		 um erro ao invocar estas*/
-		int a = 0;
+		//int a = 0;
 	}
 	
 	Data(String dia, String mes, String ano)
