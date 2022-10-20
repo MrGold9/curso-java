@@ -1,5 +1,6 @@
 package arrays;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Desafio 
@@ -10,18 +11,23 @@ public class Desafio
 		
 		Scanner entrada = new Scanner(System.in);
 
-		int numeroNotas = 0, totalNotas = 0;
+		int numeroNotas = 0;
+		double totalNotas = 0;
 		
 		System.out.println("Quantas notas você quer informar?");
 		numeroNotas = entrada.nextInt();
 		
-		for(int i = 0; i <= numeroNotas; i++) 
-		{
-			numeroNotas += i;
-		}
 		double[] notas = new double[numeroNotas];
 		
-		for (String string : args) 
+		for(int i = 0; i < numeroNotas; i++) 
+		{
+			System.out.println("Digite a nota " + (i + 1));
+			notas[i] = entrada.nextDouble();
+		}
+		
+		System.out.println(Arrays.toString(notas));
+		
+		for (double nota : notas) 
 		{
 			
 		}
