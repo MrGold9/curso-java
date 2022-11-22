@@ -7,21 +7,25 @@ public class Usuario
 	
 	String nome;
 	
+	//Construtor
 	Usuario(String nome)
 	{
 		this.nome = nome;
 	}
 	
 	
-	public String toString() {
-		// TODO Auto-generated method stub
-		return super.toString();
+	//Alterando o método .toString padrão
+	public String toString() 
+	{
+		return "Meu nome é " + this.nome + ".";
 	}
+
 
 	@Override
 	public int hashCode() {
 		return Objects.hash(nome);
 	}
+
 
 	@Override
 	public boolean equals(Object obj) {
@@ -34,6 +38,7 @@ public class Usuario
 		Usuario other = (Usuario) obj;
 		return Objects.equals(nome, other.nome);
 	}
+
 	
 	
 
