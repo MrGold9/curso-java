@@ -27,7 +27,7 @@ public class Fila
 		System.out.println(fila.element()); // Lança um exceção
 		
 		
-		//Poll e remove -> Obter o próximo elemento da fila e remover
+		//Poll e Remove -> Obter o próximo elemento da fila e remover
 		//A diferença ocorre quando a fila está vazia
 		System.out.println(fila.poll()); // Retorna null
 		System.out.println(fila.remove()); // Lança uma exceção
