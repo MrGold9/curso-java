@@ -21,12 +21,17 @@ public class Usuario
 	}
 
 
+	/*Alterando o método .hashCode para gerar um
+	 * mesmo HashCode para objetos que possuem
+	 * propriedades iguais*/
 	@Override
 	public int hashCode() {
 		return Objects.hash(nome);
 	}
 
 
+	/*Alterando o método .equals para mudar o
+	 * critério de igualdade*/
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
