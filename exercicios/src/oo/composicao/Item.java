@@ -6,6 +6,7 @@ public class Item
 	String nome;
 	int quantidade;
 	double preco;
+	Compra compra;
 	
 	Item(String nome, int quantidade, double preco)
 	{
