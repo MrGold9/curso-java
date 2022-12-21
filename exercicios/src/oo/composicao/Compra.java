@@ -6,8 +6,12 @@ public class Compra
 {
 	
 	String cliente;
+	
+	//Criando uma lista que aceita apenas variáveis do 
+	//mesmo tipo dos atributos da classe Item
 	ArrayList<Item> itens = new ArrayList<Item>();
 	
+	//Método para adicionar item na lista
 	void adicionarItem(String nome, int quantidade, double preco) 
 	{
 		this.adicionarItem(new Item(nome, quantidade, preco));
