@@ -17,6 +17,7 @@ public class Compra
 		this.adicionarItem(new Item(nome, quantidade, preco));
 	}
 	
+	//Adicionando o item na lista itens
 	void adicionarItem(Item item) 
 	{
 		this.itens.add(item);
