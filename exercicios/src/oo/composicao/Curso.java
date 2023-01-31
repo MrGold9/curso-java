@@ -6,8 +6,13 @@ import java.util.List;
 public class Curso 
 {
 	
-	String nome;
-	List<Aluno> alunos = new ArrayList<>();
+	final String nome;
+	final List<Aluno> alunos = new ArrayList<>();
+	
+	Curso(String nome)
+	{
+		this.nome = nome;
+	}
 	
 	void adicionarAluno(Aluno aluno) 
 	{
