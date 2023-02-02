@@ -7,6 +7,7 @@ public class Aluno
 {
 	
 	final String nome;
+	//ArrayList para adicionar os cursos 
 	final ArrayList<Curso> cursos = new ArrayList<Curso>();
 	
 	Aluno(String nome)
@@ -20,6 +21,7 @@ public class Aluno
 		curso.alunos.add(this);
 	}
 	
+	//Encontrar os alunos inseridos em um único curso
 	Curso obterCursoPorNome(String nome) 
 	{
 		
@@ -34,6 +36,7 @@ public class Aluno
 		
 	}
 	
+	//Alterando o método .toString
 	public String toString() 
 	{
 		return nome;
