@@ -8,9 +8,16 @@ public class Tempo1Teste
 		
 		Tempo1 tempo = new Tempo1();
 		
-		tempo.definirHora(10, 22, 50);
+		mostrarTempo("After time object is created", tempo);
+		System.out.println();
 		
-		System.out.println(tempo.toString());
+		
+		
+		private static void mostrarTempo(String cabecalho, Tempo1 t) 
+		{
+			System.out.printf("%s%nUniversal time: %s%nStandard time: %s%n",
+					cabecalho, t.paraStringUniversal(), t.toString());
+		}
 		
 	}
 
