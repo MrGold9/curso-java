@@ -7,7 +7,7 @@ public class Tempo1
 	private int minuto; // 0 - 59
 	private int segundo; // 0 - 59
 	
-	public void definirHora(int hora, int minuto, int segundo) 
+	public void definirTempo(int hora, int minuto, int segundo) 
 	{
 		
 		//Erro caso a hora esteja incorreta
@@ -25,12 +25,13 @@ public class Tempo1
 		
 	}
 	
+	//Formato 24h
 	public String paraStringUniversal() 
 	{
 		return String.format("%02d:%02d:%02d", hora, minuto, segundo);
 	}
 	
-	//alterando o método padrão .toString para o padrão de hora
+	//Formato AM/PM
 	public String toString() 
 	{
 		return String.format("%d:%02d:%02d %s",
