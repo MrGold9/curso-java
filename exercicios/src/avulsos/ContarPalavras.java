@@ -7,34 +7,41 @@ public class ContarPalavras
 	{
 		
 		
-		System.out.println(contarPalavras("Apenas um teste"));
+		System.out.println(contarPalavras(""));
 		
 		
 	}
 	
 	
 	
-	public static int contarPalavras(String palavras) 
+	public static String contarPalavras(String palavras)
 	{
-		int numPalavras = 0;
+		int numPalavras = 1;
 		
 		for (int i = 0; i < palavras.length(); i++) 
 		{
 			
-			if (palavras.charAt(i) == 't'); 
+			if (palavras.isBlank() || palavras.equalsIgnoreCase("")) 
 			{
-				numPalavras++;
+				numPalavras = 0;
 			}
 			
-			else if (palavras.charAt(i) != ' ') 
+			else if (palavras.charAt(i) == ' ' && palavras.length() > 0)
 			{
-				break;
+				numPalavras++;
+				continue;
 			}
+			
+			else if (palavras.length() > 0 && palavras.contains(" ")) 
+			{
+				numPalavras = 1;
+			}
+			
 			
 		}
 		
-		
-		return numPalavras;
+		System.out.println(palavras);
+		return numPalavras + " palavra(s)";
 	}
 
 }
