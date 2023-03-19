@@ -7,7 +7,7 @@ public class ContarPalavras
 	{
 		
 		
-		System.out.println(contarPalavras("Oi"));
+		System.out.println(contarPalavras("Apenas um teste"));
 		
 		
 	}
@@ -18,6 +18,20 @@ public class ContarPalavras
 	{
 		int numPalavras = 0;
 		
+		for (int i = 0; i < palavras.length(); i++) 
+		{
+			
+			if (palavras.charAt(i) == 't'); 
+			{
+				numPalavras++;
+			}
+			
+			else if (palavras.charAt(i) != ' ') 
+			{
+				break;
+			}
+			
+		}
 		
 		
 		return numPalavras;
