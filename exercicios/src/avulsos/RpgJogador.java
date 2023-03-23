@@ -13,7 +13,7 @@ public class RpgJogador
 		this.nomeJogador = nomeJogador;
 	}
 	
-	public void golpear(int dadoVinte) 
+	public void golpearInimigo(int dadoVinte) 
 	{
 		Random random = new Random();
 		dadoVinte = random.nextInt(20)+1;
@@ -30,10 +30,10 @@ public class RpgJogador
 			System.out.println(RpgInimigo.nomeInimigo + " perdeu 40 de vida");
 		}
 		
-		else if(dadoVinte == 1) 
+		else if(dadoVinte == 1)
 		{
-			RpgInimigo.vidaInimigo =- 40;
-			System.out.println(nomeJogador + " perdeu 10 de vida");
+			vidaJogador =- 40;
+			System.out.println(nomeJogador + " perdeu 40 de vida");
 		}
 	}
 
