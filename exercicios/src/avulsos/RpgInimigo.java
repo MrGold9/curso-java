@@ -13,26 +13,27 @@ public class RpgInimigo
 		
 	}
 	
-	public void golpearJogador(int dadoVinte) 
+	public void golpearJogador() 
 	{
+		int dadoVinte = 0;
 		Random random = new Random();
 		dadoVinte = random.nextInt(20)+1;
 		
 		if(dadoVinte < 20 || dadoVinte > 1) 
 		{
-			RpgInimigo.vidaInimigo =- 10;
+			RpgJogador.vidaJogador -= 10;
 			System.out.println(RpgInimigo.nomeInimigo + " perdeu 10 de vida");
 		}
 		
 		else if(dadoVinte == 20) 
 		{
-			RpgInimigo.vidaInimigo =- 40;
+			RpgJogador.vidaJogador -= 40;
 			System.out.println(RpgInimigo.nomeInimigo + " perdeu 40 de vida");
 		}
 		
 		else if(dadoVinte == 1)
 		{
-			vidaInimigo =- 40;
+			vidaInimigo -= 40;
 			System.out.println(nomeInimigo + " perdeu 40 de vida");
 		}
 	}
