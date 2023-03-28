@@ -8,9 +8,10 @@ public class RpgTeste
 	public static void main(String[] args) 
 	{
 		Scanner entrada = new Scanner(System.in);
-		String continuar = "s";
+		char continuar = 's';
+		int acao;
 		
-		while(continuar == "s")
+		while (continuar == 's')
 		{
 		
 		RpgJogador jogador1 = new RpgJogador("Walter");
@@ -20,6 +21,21 @@ public class RpgTeste
 		System.out.println();
 		System.out.println(inimigo1.nomeInimigo + "\nVida: " + inimigo1.vidaInimigo);
 		System.out.println();
+		
+		switch (acao) 
+		{
+		case 1: 
+		{
+			
+		}
+		case 2:
+		{
+			
+		}
+		default:
+		{
+			throw new IllegalArgumentException("Unexpected value: ");
+		}
 		
 		
 		System.out.println();
@@ -34,10 +50,15 @@ public class RpgTeste
 			System.out.println(inimigo1.nomeInimigo + " ganhou o jogo");
 		}
 		
+		System.out.println("Deseja reiniciar o jogo? (s/n)");
+		continuar = entrada.next().charAt(0);
 		
-		//continuar = entrada.nextLine();
 		
 		}
+		
+		System.out.println("Jogo finalizado");
+		
+		entrada.close();
 
 	}
 
