@@ -8,9 +8,9 @@ public class RpgJogador
 	public static int vidaJogador = 100;
 	
 	
-	public RpgJogador(String nomeJogador)
+	public RpgJogador()
 	{
-		this.nomeJogador = nomeJogador;
+		
 	}
 	
 	public void golpearInimigo() 

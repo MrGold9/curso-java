@@ -22,13 +22,14 @@ public class RpgInimigo
 		if(dadoVinte < 20 || dadoVinte > 1) 
 		{
 			RpgJogador.vidaJogador -= 10;
-			System.out.println(RpgInimigo.nomeInimigo + " perdeu 10 de vida");
+			System.out.println(RpgJogador.nomeJogador + " perdeu 10 de vida");
+			System.out.println("Dado = " + dadoVinte);
 		}
 		
 		else if(dadoVinte == 20) 
 		{
 			RpgJogador.vidaJogador -= 40;
-			System.out.println(RpgInimigo.nomeInimigo + " perdeu 40 de vida");
+			System.out.println(RpgJogador.nomeJogador + " perdeu 40 de vida");
 		}
 		
 		else if(dadoVinte == 1)
