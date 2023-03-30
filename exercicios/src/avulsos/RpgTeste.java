@@ -10,12 +10,15 @@ public class RpgTeste
 		Scanner entrada = new Scanner(System.in);
 		char continuar = 's';
 		
-		while (continuar == 's')
+		RpgJogador jogador1 = new RpgJogador();
+		RpgInimigo inimigo1 = new RpgInimigo();
+		
+		System.out.println("Insira o nome do seu personagem: ");
+		jogador1.nomeJogador = entrada.next();
+		
+		while (jogador1.vidaJogador > 0 && inimigo1.vidaInimigo > 0)
 		{
 			int acao = 0;
-		
-			RpgJogador jogador1 = new RpgJogador("Walter");
-			RpgInimigo inimigo1 = new RpgInimigo();
 		
 			System.out.println(jogador1.nomeJogador + "\nVida: " + jogador1.vidaJogador);
 			System.out.println();
@@ -45,6 +48,8 @@ public class RpgTeste
 				}
 		
 			}
+			
+			inimigo1.golpearJogador();
 		
 		
 			System.out.println();
@@ -58,9 +63,10 @@ public class RpgTeste
 			{
 				System.out.println(inimigo1.nomeInimigo + " ganhou o jogo");
 			}
-		
-			System.out.println("Deseja reiniciar o jogo? (s/n)");
-			continuar = entrada.next().charAt(0);
+
+			
+			//System.out.println("Deseja reiniciar o jogo? (s/n)");
+			//continuar = entrada.next().charAt(0);
 		
 		
 		
