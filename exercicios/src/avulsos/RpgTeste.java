@@ -75,6 +75,9 @@ public class RpgTeste
 		
 		entrada.close();
 		System.out.println("Jogo finalizado");
+		
+		System.out.println(RpgJogador.historicoDados);
+		System.out.println(RpgInimigo.historicoDados);
 	}
 }
 
