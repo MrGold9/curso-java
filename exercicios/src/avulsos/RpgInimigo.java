@@ -25,7 +25,7 @@ public class RpgInimigo
 		
 		historicoDados.add(dadoVinte);
 		
-		if(dadoVinte < 20 || dadoVinte > 1) 
+		if(dadoVinte < 20 && dadoVinte > 1) 
 		{
 			RpgJogador.vidaJogador -= 10;
 			System.out.println("\n" + RpgJogador.nomeJogador + " perdeu 10 de vida");
