@@ -24,7 +24,7 @@ public class RpgJogador
 		
 		historicoDados.add(dadoVinte);
 		
-		if(dadoVinte < 20 && dadoVinte > 1) 
+		if(dadoVinte < 20 && dadoVinte > 1 && RpgInimigo.vidaInimigo > 0) 
 		{
 			RpgInimigo.vidaInimigo -= 10;
 			System.out.println(RpgInimigo.nomeInimigo + " perdeu 10 de vida");
@@ -32,7 +32,7 @@ public class RpgJogador
 			System.out.println("Dado Golpe Jogador = " + dadoVinte);
 		}
 		
-		if(dadoVinte == 20) 
+		if(dadoVinte == 20 && RpgInimigo.vidaInimigo > 0) 
 		{
 			RpgInimigo.vidaInimigo -= 40;
 			System.out.println(RpgInimigo.nomeInimigo + " perdeu 40 de vida");
@@ -40,7 +40,7 @@ public class RpgJogador
 			System.out.println("Dado Golpe Jogador = " + dadoVinte);
 		}
 		
-		if(dadoVinte == 1)
+		if(dadoVinte == 1 && RpgInimigo.vidaInimigo > 0)
 		{
 			vidaJogador -= 40;
 			System.out.println(nomeJogador + " perdeu 40 de vida");
