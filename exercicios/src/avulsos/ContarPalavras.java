@@ -20,16 +20,15 @@ public class ContarPalavras
 		
 		for (int i = 0; i < palavras.length(); i++) 
 		{
-			
-			if (palavras.isBlank() || palavras.equalsIgnoreCase("")) 
-			{
-				numPalavras = 0;
-			}
-			
-			else if (palavras.charAt(i) == ' ' && palavras.length() > 0)
+			if (palavras.charAt(i) == ' ' && palavras.length() > 0)
 			{
 				numPalavras++;
 				continue;
+			}
+			
+			else if (palavras.isBlank() || palavras.equalsIgnoreCase("")) 
+			{
+				numPalavras = 0;
 			}
 			
 			else if (palavras.length() > 0 && palavras.contains(" ")) 

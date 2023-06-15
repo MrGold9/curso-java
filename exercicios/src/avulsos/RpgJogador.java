@@ -48,5 +48,10 @@ public class RpgJogador
 			System.out.println("Dado Golpe Jogador = " + dadoVinte);
 		}
 	}
+	
+	public void defenderDoInimigo() 
+	{
+		//método para defender golpes
+	}
 
 }
