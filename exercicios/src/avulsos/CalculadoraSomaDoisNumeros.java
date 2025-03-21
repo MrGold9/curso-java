@@ -10,6 +10,7 @@ public class CalculadoraSomaDoisNumeros
 		//Calculadora de soma entre dois números
 		
 		//Declarando as variáveis
+		//teste commit
 		int num1=0, num2=0, soma=0;
 		String juncao;
 		
