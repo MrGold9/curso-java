@@ -6,32 +6,49 @@ public class AreaVolumeCaixa {
 
 	public static void main(String[] args) 
 	{
+		
 		Scanner entrada = new Scanner(System.in);
 		
-		
-		CalcularArea();
-		
-		System.out.println(resultadoArea);
+		CalcularAreaVolume(entrada);
 		
 		entrada.close();
 
 	}
 	
-	public static void CalcularArea()
+	public static void CalcularAreaVolume(Scanner entrada)
 	{
-		Scanner entrada = new Scanner(System.in);
+		double comprimento, largura, altura, area, volume;
 		
-		double lado1, lado2, resultadoArea;
+		System.out.print("Insira o comprimento da caixa: ");
+		comprimento = entrada.nextDouble();
+		while (comprimento <= 0) 
+		{
+			System.out.print("O número não pode ser negativo ou nulo. Insira o comprimento da caixa: ");
+			comprimento = entrada.nextDouble();
+		}
 		
-		System.out.print("Insira o primeiro lado da caixa: ");
-		lado1 = entrada.nextDouble();
+		System.out.print("Insira a largura da caixa: ");
+		largura = entrada.nextDouble();
+		while (largura <= 0) 
+		{
+			System.out.print("O número não pode ser negativo ou nulo. Insira a largura da caixa: ");
+			largura = entrada.nextDouble();
+		}
 		
-		System.out.print("Insira o segundo da caixa: ");
-		lado2 = entrada.nextDouble();
+		System.out.print("Insira a altura da caixa: ");
+		altura = entrada.nextDouble();
+		while (altura <= 0)
+		{
+			System.out.print("O número não pode ser negativo ou nulo. Insira a altura da caixa: ");
+			altura = entrada.nextDouble();
+		}
 		
-		static resultadoArea = lado1 * lado2;
+		area = 2*((comprimento*largura) + (comprimento*altura) + (largura*altura));
 		
-		entrada.close();
+		volume = comprimento * largura * altura;
+		
+		System.out.println("A área da caixa é de: " + area);
+		System.out.println("O volume da caixa é de: " + volume);
 	}
 
 }
