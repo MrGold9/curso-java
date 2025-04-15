@@ -1,8 +1,8 @@
-package avulsos;
+package avulsos.JogoRPG;
 
 import java.util.Scanner;
 
-public class RpgTeste 
+public class ClasseMain 
 {
 
 	public static void main(String[] args) 
@@ -25,7 +25,7 @@ public class RpgTeste
 			System.out.println(inimigo1.nomeInimigo + "\nVida: " + inimigo1.vidaInimigo);
 			System.out.println();
 			
-			System.out.println("Selecione uma a√ß√£o: \n1 - Golpear \n2 - Defender");
+			System.out.println("Selecione uma opÁ„o: \n1 - Golpear \n2 - Defender");
 		
 			acao = entrada.nextInt();
 			switch (acao)
@@ -44,7 +44,7 @@ public class RpgTeste
 		
 				default:
 				{
-					throw new IllegalArgumentException("Insira uma op√ß√£o v√°lida");
+					throw new IllegalArgumentException("Insira uma opÁ„o v·lida");
 				}
 		
 			}

@@ -1,4 +1,4 @@
-package avulsos;
+package avulsos.JogoRPG;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -36,7 +36,7 @@ public class RpgInimigo
 		if(dadoVinte == 20 && RpgJogador.vidaJogador > 0) 
 		{
 			RpgJogador.vidaJogador -= 40;
-			System.out.println("\n" + RpgJogador.nomeJogador + " perdeu 40 de vida");
+			System.out.println("\nDano crítico! " + RpgJogador.nomeJogador + " perdeu 40 de vida");
 			
 			System.out.println("Dado Golpe Inimigo = " + dadoVinte);
 		}
@@ -44,7 +44,7 @@ public class RpgInimigo
 		if(dadoVinte == 1 && RpgJogador.vidaJogador > 0)
 		{
 			vidaInimigo -= 40;
-			System.out.println("\n" + nomeInimigo + " perdeu 40 de vida");
+			System.out.println("\nEssa doeu! " + nomeInimigo + " perdeu 40 de vida");
 			
 			System.out.println("Dado Golpe Inimigo = " + dadoVinte);
 		}
