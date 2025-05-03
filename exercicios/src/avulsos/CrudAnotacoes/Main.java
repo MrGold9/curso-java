@@ -6,45 +6,54 @@ public class Main {
 
 	public static void main(String[] args) 
 	{
+		int escolhaOpcao;
 		
-		Scanner entrada = new Scanner (System.in);
 		
-		ArrayList<String> anotacoes = new ArrayList<>();
+		
+		ArrayList<String> notas = new ArrayList<>();
 		
 		while(true) 
 		{
+			Scanner entrada = new Scanner (System.in);
 			
 			try 
 			{
-				int escolhaOpcao = 0;
-				String conteudoNota = "";
-				
-				System.out.print("Escolha uma das opções abaixo: \n"
+				escolhaOpcao = 0;
+				System.out.println("Escolha uma das opções abaixo: \n"
 						+ "1 - Criar uma nota \n"
 						+ "2 - Ler uma nota \n"
 						+ "3 - Alterar uma nota \n"
-						+ "4 - Excluir uma nota \n");
+						+ "4 - Excluir uma nota");
 				escolhaOpcao = entrada.nextInt();
+				entrada.nextLine();
 				
 				if(escolhaOpcao == 1) 
 				{
 					System.out.println("Insira o conteúdo da nota");
-					conteudoNota = entrada.next();
-					anotacoes.add(conteudoNota);
+				 	String conteudoNota = entrada.nextLine();
+					notas.add(conteudoNota);
 					
 					System.out.println("\n");
 				}
 				
 				else if(escolhaOpcao == 2) 
 				{
-					System.out.println(anotacoes);
+					System.out.println("Qual das notas você deseja visualizar? Existem " + notas.size());
+					int escolhaNota = entrada.nextInt() - 1;
+					entrada.nextLine();
+					System.out.println(notas.get(escolhaNota));
 					
 					System.out.println("\n");
 				}
 				
 				else if(escolhaOpcao == 3) 
 				{
+					System.out.println("Qual das notas você deseja alterar? Existem " + notas.size());
+					int escolhaNota = entrada.nextInt() - 1;
+					entrada.nextLine();
+					System.out.println("Reescreva: " + entrada.nextLine());
 					
+					System.out.println("\n");
 				}
 				
 				else if(escolhaOpcao == 4) 
@@ -52,16 +61,21 @@ public class Main {
 					
 				}
 				
-			} 
+			}
+			catch (InputMismatchException e) 
+			{
+				System.out.println("Insira um número!\n\n");
+				//entrada.nextLine();
+			}
 			catch (Exception e) 
 			{
-				//System.out.println("Algo de errado não está certo!");
+				System.out.println("Algo de errado não está certo!\n\n");
+				//entrada.nextLine();
 			}
 			
-			
-			
+		
 		}
-
+		
 	}
 
 }
