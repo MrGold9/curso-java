@@ -7,8 +7,8 @@ public class Main {
 	public static void main(String[] args) 
 	{
 		int escolhaOpcao;
-		
-		
+		String conteudoNota;
+		int escolhaNota;
 		
 		ArrayList<String> notas = new ArrayList<>();
 		
@@ -19,6 +19,9 @@ public class Main {
 			try 
 			{
 				escolhaOpcao = 0;
+				conteudoNota = "";
+				escolhaNota = 0;
+				
 				System.out.println("Escolha uma das opções abaixo: \n"
 						+ "1 - Criar uma nota \n"
 						+ "2 - Ler uma nota \n"
@@ -29,8 +32,8 @@ public class Main {
 				
 				if(escolhaOpcao == 1) 
 				{
-					System.out.println("Insira o conteúdo da nota");
-				 	String conteudoNota = entrada.nextLine();
+					System.out.print("Insira o conteúdo da nota: ");
+				 	conteudoNota = entrada.nextLine();
 					notas.add(conteudoNota);
 					
 					System.out.println("\n");
@@ -39,7 +42,7 @@ public class Main {
 				else if(escolhaOpcao == 2) 
 				{
 					System.out.println("Qual das notas você deseja visualizar? Existem " + notas.size());
-					int escolhaNota = entrada.nextInt() - 1;
+					escolhaNota = entrada.nextInt() - 1;
 					entrada.nextLine();
 					System.out.println(notas.get(escolhaNota));
 					
@@ -49,28 +52,42 @@ public class Main {
 				else if(escolhaOpcao == 3) 
 				{
 					System.out.println("Qual das notas você deseja alterar? Existem " + notas.size());
-					int escolhaNota = entrada.nextInt() - 1;
+					escolhaNota = entrada.nextInt() - 1;
 					entrada.nextLine();
-					System.out.println("Reescreva: " + entrada.nextLine());
+					
+					System.out.println("Nota antiga: " + notas.get(escolhaNota));
+					
+					System.out.print("Nota editada: ");
+					conteudoNota = entrada.nextLine();
+					notas.set(escolhaNota, conteudoNota);
 					
 					System.out.println("\n");
 				}
 				
 				else if(escolhaOpcao == 4) 
 				{
+					System.out.println("Qual das notas você deseja excluir? Existem " + notas.size());
+					escolhaNota = entrada.nextInt() - 1;
+					entrada.nextLine();
 					
+					System.out.println("A seguinte nota foi excluída: " + notas.get(escolhaNota));
+					notas.remove(escolhaNota);
+					
+					System.out.println("\n");
+				}
+				else if(escolhaOpcao<=0 || escolhaOpcao>=5) 
+				{
+					System.out.println("Selecione um número entre 1 e 4 apenas!\n\n");
 				}
 				
 			}
 			catch (InputMismatchException e) 
 			{
 				System.out.println("Insira um número!\n\n");
-				//entrada.nextLine();
 			}
 			catch (Exception e) 
 			{
 				System.out.println("Algo de errado não está certo!\n\n");
-				//entrada.nextLine();
 			}
 			
 		
