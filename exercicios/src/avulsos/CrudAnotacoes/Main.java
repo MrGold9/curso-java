@@ -30,7 +30,22 @@ public class Main {
 				escolhaOpcao = entrada.nextInt();
 				entrada.nextLine();
 				
-				if(escolhaOpcao == 1) 
+				if(escolhaOpcao == 2 && notas.size() == 0) 
+				{
+					System.out.println("Não tem nenhuma nota para ler!\n\n");
+				}
+				
+				else if(escolhaOpcao == 3 && notas.size() == 0) 
+				{
+					System.out.println("Não tem nenhuma nota para alterar!\n\n");
+				}
+				
+				else if(escolhaOpcao == 4 && notas.size() == 0) 
+				{
+					System.out.println("Não tem nenhuma nota para excluir!\n\n");
+				}
+				
+				else if(escolhaOpcao == 1) 
 				{
 					System.out.print("Insira o conteúdo da nota: ");
 				 	conteudoNota = entrada.nextLine();
@@ -39,7 +54,7 @@ public class Main {
 					System.out.println("\n");
 				}
 				
-				else if(escolhaOpcao == 2) 
+				else if(escolhaOpcao == 2 && notas.size() == 0) 
 				{
 					System.out.println("Qual das notas você deseja visualizar? Existem " + notas.size());
 					escolhaNota = entrada.nextInt() - 1;
@@ -49,7 +64,7 @@ public class Main {
 					System.out.println("\n");
 				}
 				
-				else if(escolhaOpcao == 3) 
+				else if(escolhaOpcao == 3 && notas.size() == 0) 
 				{
 					System.out.println("Qual das notas você deseja alterar? Existem " + notas.size());
 					escolhaNota = entrada.nextInt() - 1;
@@ -64,7 +79,7 @@ public class Main {
 					System.out.println("\n");
 				}
 				
-				else if(escolhaOpcao == 4) 
+				else if(escolhaOpcao == 4 && notas.size() == 0) 
 				{
 					System.out.println("Qual das notas você deseja excluir? Existem " + notas.size());
 					escolhaNota = entrada.nextInt() - 1;
@@ -75,7 +90,8 @@ public class Main {
 					
 					System.out.println("\n");
 				}
-				else if(escolhaOpcao<=0 || escolhaOpcao>=5) 
+				
+				else if(escolhaOpcao <= 0 || escolhaOpcao >= 5) 
 				{
 					System.out.println("Selecione um número entre 1 e 4 apenas!\n\n");
 				}
