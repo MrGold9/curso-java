@@ -1,6 +1,7 @@
 package avulsos.CrudAnotacoes;
 
 import java.util.*;
+import javax.swing.*;
 
 public class Main {
 
@@ -11,6 +12,12 @@ public class Main {
 		int escolhaNota;
 		
 		ArrayList<String> notas = new ArrayList<>();
+		
+		JFrame frame = new JFrame();
+		frame.setTitle("Anotações");
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setSize(1280,720);
+		frame.setVisible(true);
 		
 		while(true) 
 		{
@@ -54,7 +61,7 @@ public class Main {
 					System.out.println("\n");
 				}
 				
-				else if(escolhaOpcao == 2 && notas.size() == 0) 
+				else if(escolhaOpcao == 2) 
 				{
 					System.out.println("Qual das notas você deseja visualizar? Existem " + notas.size());
 					escolhaNota = entrada.nextInt() - 1;
@@ -64,7 +71,7 @@ public class Main {
 					System.out.println("\n");
 				}
 				
-				else if(escolhaOpcao == 3 && notas.size() == 0) 
+				else if(escolhaOpcao == 3) 
 				{
 					System.out.println("Qual das notas você deseja alterar? Existem " + notas.size());
 					escolhaNota = entrada.nextInt() - 1;
@@ -79,7 +86,7 @@ public class Main {
 					System.out.println("\n");
 				}
 				
-				else if(escolhaOpcao == 4 && notas.size() == 0) 
+				else if(escolhaOpcao == 4) 
 				{
 					System.out.println("Qual das notas você deseja excluir? Existem " + notas.size());
 					escolhaNota = entrada.nextInt() - 1;
