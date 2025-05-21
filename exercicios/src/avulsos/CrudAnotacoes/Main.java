@@ -7,17 +7,13 @@ public class Main {
 
 	public static void main(String[] args) 
 	{
+		MeuFrame MeuFrame = new MeuFrame();
+		
 		int escolhaOpcao;
 		String conteudoNota;
 		int escolhaNota;
 		
 		ArrayList<String> notas = new ArrayList<>();
-		
-		JFrame frame = new JFrame();
-		frame.setTitle("Anotações");
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.setSize(1280,720);
-		frame.setVisible(true);
 		
 		while(true) 
 		{
